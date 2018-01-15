@@ -1,0 +1,2 @@
+" Rafal's vim config
+"
