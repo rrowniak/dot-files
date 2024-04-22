@@ -1,11 +1,11 @@
 #!/bin/bash -e
 
-echo "Installing neovim and dependencies (ripgrep, npm, nodejs, make, python3-pip, cargo (rust))"
+echo "Installing neovim and dependencies (ripgrep, npm, nodejs, make, python3-pip, cargo (rust), xclip)"
 # for installing neovim snap is used instead of apt, for this release 22.04 apt installs really ancient version of the nvim (0.6)
 #sudo add-apt-repositoneovim ry ppa:neovim-ppa/stable
 #sudo apt-get update
 #sudo apt install neovim
-sudo apt install ripgrep npm nodejs make python3-pip cargo
+sudo apt install ripgrep npm nodejs make python3-pip cargo xclip
 sudo snap install nvim --classic
 
 echo "get the astrovim theme"
