@@ -10,7 +10,7 @@ sudo snap install nvim --classic
 
 echo "get the astrovim theme"
 # nerdfonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/3270.zip
+[ -f ./3270.zip ] || wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/3270.zip
 sudo mkdir -p /usr/share/fonts/3270
 sudo unzip 3270.zip -d /usr/share/fonts/3270
 fc-cache -f -v
@@ -23,5 +23,5 @@ mv ~/.config/nvim ~/.config/nvim.bak
 [ ! -f  ~/.local/state/nvim ] || mv ~/.local/state/nvim ~/.local/state/nvim.bak
 [ ! -f  ~/.cache/nvim ] || mv ~/.cache/nvim ~/.cache/nvim.bak
 
-git clone --depth 1 git@github.com:rrowniak/AstroNVImConfig.git ~/.config/nvim
+git clone --depth 1 https://github.com/rrowniak/AstroNVImConfig.git ~/.config/nvim
 
