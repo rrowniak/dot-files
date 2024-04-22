@@ -4,7 +4,7 @@ echo "Installing neovim and dependencies (ripgrep, npm, nodejs, make, python3-pi
 # for installing neovim snap is used instead of apt, for this release 22.04 apt installs really ancient version of the nvim (0.6)
 #sudo add-apt-repositoneovim ry ppa:neovim-ppa/stable
 #sudo apt-get update
-sudo apt install neovim
+#sudo apt install neovim
 sudo apt install ripgrep npm nodejs make python3-pip cargo
 sudo snap install nvim --classic
 
@@ -19,9 +19,9 @@ fc-cache -f -v
 # install astrovim
 mkdir -p ~/.config/nvim
 mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
+[ ! -f  ~/.local/share/nvim ] || mv ~/.local/share/nvim ~/.local/share/nvim.bak
+[ ! -f  ~/.local/state/nvim ] || mv ~/.local/state/nvim ~/.local/state/nvim.bak
+[ ! -f  ~/.cache/nvim ] || mv ~/.cache/nvim ~/.cache/nvim.bak
 
 git clone --depth 1 git@github.com:rrowniak/AstroNVImConfig.git ~/.config/nvim
 
